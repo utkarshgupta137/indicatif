@@ -643,7 +643,7 @@ impl Default for ProgressFinish {
 /// Notice that the constraint implies that estimates are independent of the durations of the
 /// samples, a very useful feature.
 fn estimator_weight(age: f64) -> f64 {
-    const EXPONENTIAL_WEIGHTING_SECONDS: f64 = 15.0;
+    const EXPONENTIAL_WEIGHTING_SECONDS: f64 = 300.0;
     0.1_f64.powf(age / EXPONENTIAL_WEIGHTING_SECONDS)
 }
 
